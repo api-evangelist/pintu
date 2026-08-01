@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pintu.pro/
+docs: https://docs.pintu.pro/
+format: numeric-code-message
+envelope:
+  fields: [code, message]
+  description: >-
+    Error replies carry a numeric code and a symbolic message string. Only
+    codes explicitly documented on the public reference are captured here; the
+    full registry is behind the auth-gated docs portal.
+error_codes:
+- code: 17
+  message: TOO_MANY_REQUESTS
+  meaning: Weighted rate-limit token budget for the account was exceeded.
+  action: Back off and retry; each endpoint consumes a different token cost per second.

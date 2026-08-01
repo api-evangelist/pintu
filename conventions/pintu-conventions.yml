@@ -1,0 +1,56 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pintu.pro/
+docs: https://docs.pintu.pro/
+authentication:
+  style: hmac-sha256-signed-envelope
+  ref: authentication/pintu-authentication.yml
+transports:
+  note: The message format is identical for the HTTP endpoint and the WebSocket (WSS) transport.
+  http: request/response over HTTPS
+  websocket:
+    production: wss://partner.pintu.co.id/ws/v1
+    sandbox: wss://partner.sandbox.pintu.co.id/ws/v1
+request_envelope:
+  fields: [request_id, method, api_key, params, timestamp, signature]
+  description: >-
+    All calls are wrapped in a signed envelope. request_id correlates the
+    request with its reply.
+idempotency:
+  supported: true
+  mechanism: client-order-id
+  fields:
+    ClOrdID: >-
+      Client-assigned order id on NewOrderSingle — the client's idempotency
+      handle for an order; replies (ExecutionReport) are keyed back to it.
+    OrigClOrdID: references the original ClOrdID on OrderCancelRequest.
+    request_id: per-request correlation id on the signed envelope.
+  notes: >-
+    Order operations are keyed by client-supplied ClOrdID (FIX-style), so an
+    order can be tracked, matched, and cancelled deterministically by the
+    caller's own identifier without creating duplicates.
+pagination:
+  style: streaming-replay
+  mechanism: >-
+    Historical replay on streaming channels via a StartDate parameter — a
+    subscription can request execution reports / trades from a given start date
+    rather than page tokens.
+subscriptions:
+  message: One subscribe message may list an array of channels; one reply is returned per requested channel.
+  public_vs_private: >-
+    Public channels stream without a handshake; private channels require the
+    channel subscription routine first.
+  channels: [ExecutionReport, Trade, user.orders]
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: /ws/v1 path on the WebSocket endpoints
+error_envelope:
+  ref: errors/pintu-error-codes.yml
+  shape: replies carry a numeric code and a message (e.g. code=17 message=TOO_MANY_REQUESTS)
+rate_limiting:
+  ref: rate-limits/
+  style: weighted-token-bucket
+  description: >-
+    Each account is granted X tokens per second; each endpoint has a different
+    token cost. Exceeding the budget returns code=17 / TOO_MANY_REQUESTS.

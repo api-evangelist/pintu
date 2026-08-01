@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pintu.pro/
+docs: https://docs.pintu.pro/
+summary:
+  types: [apiKey, hmac]
+  api_key_in: [payload]
+  oauth2_flows: []
+  transports: [http, websocket]
+schemes:
+- name: PintuHMAC
+  type: apiKey
+  scheme: hmac-sha256
+  in: payload
+  key_field: api_key
+  signature_field: signature
+  description: >-
+    Every request (HTTP or WebSocket) is wrapped in a signed envelope. The
+    caller supplies an API key and computes an HMAC-SHA256 signature over the
+    request payload using their API secret; the resulting hex string is placed
+    in the wrapper's signature field. A place-order request wrapper carries
+    request_id, method, api_key, params, timestamp, and signature.
+  fields:
+    request_id: unique client-generated request identifier
+    method: the operation being invoked
+    api_key: the partner's issued API key
+    params: operation-specific parameters
+    timestamp: request timestamp (replay protection)
+    signature: HMAC-SHA256(secret, payload) as hex
+  channels:
+    public: no subscription handshake required
+    private: requires the WebSocket channel subscription routine before streaming

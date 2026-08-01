@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pintu.pro/
+note: >-
+  Cross-cutting standards posture for the Pintu Pro partner API. Auth/transport
+  facts are derived from the captured authentication/conventions artifacts; the
+  compliance entry is sourced from Pintu's published ISO 27001 posture (see
+  security/pintu-trust-center.yml). No OpenAPI is published to harvest, so
+  spec-shaped standards (JSON:API, RFC 9457, OData, pagination) are asserted
+  from the documented message-envelope conventions rather than a spec.
+standards:
+- id: iso-27001
+  conforms: true
+  evidence: ISO/IEC 27001:2022 ISMS certification (security/pintu-trust-center.yml)
+- id: hmac-request-signing
+  conforms: true
+  evidence: HMAC-SHA256 signed request envelope over HTTP and WebSocket (authentication/pintu-authentication.yml)
+- id: websocket-streaming
+  conforms: true
+  evidence: RFC 6455 WSS transport at wss://partner.pintu.co.id/ws/v1 (conventions/pintu-conventions.yml)
+- id: oauth2
+  conforms: false
+  evidence: No OAuth2 flow; authentication is API-key + HMAC signature.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are returned in the provider's own envelope (errors/pintu-error-codes.yml), not application/problem+json.
+- id: idempotency
+  conforms: true
+  evidence: request_id correlates request/reply and de-duplicates retries (conventions/pintu-conventions.yml)
+- id: fapi
+  conforms: false
+- id: json-api
+  conforms: false
+- id: scim
+  conforms: false

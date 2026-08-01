@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pintu-crypto
+notes: >-
+  Pintu Pro publishes official sample/reference code for its partner API rather
+  than a versioned, registry-published client SDK. No first-party library was
+  found on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist, or
+  crates.io. The Go sample below is first-party (pintu-crypto org) but is a
+  source-code reference implementation, not an installable package — so no
+  canonical SDKs pointer is emitted.
+packages:
+- language: go
+  registry: github
+  name: pintu-api-sample-go
+  url: https://github.com/pintu-crypto/pintu-api-sample-go
+  install: git clone https://github.com/pintu-crypto/pintu-api-sample-go
+  official: true
+  kind: sample
+  description: >-
+    First-party Go sample client for the Pintu Pro partner API — demonstrates
+    HMAC authentication, the request wrapper protocol, sending NewOrderSingle /
+    OrderCancelRequest messages, and subscribing to the ExecutionReport and
+    Trade WebSocket channels.

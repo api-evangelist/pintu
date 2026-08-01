@@ -1,0 +1,5 @@
+Canonical: https://pintu.co.id/.well-known/security.txt
+Contact: https://bugbounty.pintu.co.id/
+Expires: 2027-12-31T11:59:00Z
+Policy: https://pintu.co.id/security/bug-bounty
+Preferred-Languages: en

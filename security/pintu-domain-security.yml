@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: pintu.co.id
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 09:40:01 2026 GMT
+  hsts: false
+- host: docs.pintu.pro
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  5 23:59:59 2026 GMT
+  hsts: null
+- host: partner.pintu.co.id
+  https: false
+domains:
+- domain: pintu.co.id
+  dnssec: true
+  caa:
+  - 0 issue "comodoca.com"
+  - 0 issue "digicert.com; cansignhttpexchanges=yes"
+  - 0 issue "letsencrypt.org"
+  - 0 issue "pki.goog; cansignhttpexchanges=yes"
+  - 0 issue "ssl.com"
+  - 0 issuewild "amazon.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: pintu.pro
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false

@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of /.well-known/ on pintu.co.id, docs.pintu.pro, partner.pintu.co.id
+hosts:
+- host: https://pintu.co.id
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: pintu-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: https://docs.pintu.pro
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+    note: docs portal is auth-gated
+- host: https://partner.pintu.co.id
+  documents:
+  - path: /.well-known/security.txt
+    status: 000
+    note: host serves WebSocket (wss://partner.pintu.co.id/ws/v1); no HTTP GET

@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/pintu-crypto/pintu-api-sample-go
+docs: https://docs.pintu.pro/
+separation:
+  model: dedicated-sandbox-host
+  description: >-
+    Pintu Pro publishes a distinct sandbox environment addressed by hostname
+    (not a key prefix). Partners connect the same signed-envelope protocol and
+    HMAC credentials to the sandbox host to place and monitor test orders.
+environments:
+- name: sandbox
+  websocket: wss://partner.sandbox.pintu.co.id/ws/v1
+- name: production
+  websocket: wss://partner.pintu.co.id/ws/v1
+credentials:
+  model: api_key + api_secret issued to the partner
+  usage: >-
+    Sample client is launched with --addr (WS host), --apikey, and --apisecret;
+    the same credential shape is used against sandbox and production.
+notes: >-
+  No published magic/test card or fixed test-identifier values were found;
+  Pintu Pro is an order-routing partner API, so sandbox testing uses the
+  sandbox host with issued credentials rather than canned test tokens.

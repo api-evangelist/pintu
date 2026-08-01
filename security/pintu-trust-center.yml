@@ -1,0 +1,40 @@
+generated: '2026-07-20'
+method: searched
+probe: false
+source: https://pintu.co.id/en/faq/safe-to-use-pintu
+note: >-
+  Pintu does not operate a dedicated trust.pintu.co.id / security portal that the
+  automated probe could detect (the corporate site returns 403 to non-browser
+  clients). Its security and compliance posture is published across its public
+  FAQ / security help pages and confirmed by multiple independent sources; it is
+  recorded here as a searched trust-center entry.
+compliance_program:
+  isms: ISO/IEC 27001 Information Security Management System
+certifications:
+- name: ISO/IEC 27001:2022
+  scope: Information Security Management System (ISMS)
+  note: >-
+    Pintu (PT Pintu Kemana Saja) is ISO/IEC 27001 certified, migrated from the
+    earlier ISO/IEC 27001:2013 ISMS implementation.
+regulatory:
+- authority: OJK (Otoritas Jasa Keuangan / Indonesia Financial Services Authority)
+  status: licensed / supervised
+- authority: Bappebti
+  status: Physical Crypto Asset Trader (PFAK)
+- membership: PT Central Finansial X (CFX) — crypto asset exchange
+- membership: PT Kustodian Koin Indonesia (ICC) — custodian
+- membership: PT Kliring Komoditi Indonesia (KKI) — clearing house
+custody:
+  provider: Curv (curv.co)
+  note: MPC-based key management to avoid a private-key single point of failure.
+account_security:
+- OTP
+- 2FA (Google Authenticator)
+- Fingerprint / Face ID
+evidence:
+- source: https://pintu.co.id/en/faq/safe-to-use-pintu
+  kind: security-faq
+  claims: [iso 27001, ojk licensed, curv custody, 2fa]
+- source: https://pintu.co.id/en/faq/topic/security
+  kind: security-faq
+  claims: [isms, iso 27001:2013 baseline]

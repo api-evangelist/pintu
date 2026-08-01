@@ -1,0 +1,30 @@
+# Pintu
+
+> Pintu (PT Pintu Kemana Saja) is an Indonesian cryptocurrency exchange and investment app (founded 2020, 4M+ users, Bappebti/OJK-licensed). Pintu Pro is its institutional/partner trading platform, exposing an HMAC-signed WebSocket + HTTP order-routing API at docs.pintu.pro with production and sandbox environments.
+
+## APIs
+
+- [Pintu Pro Partner API](https://docs.pintu.pro/): HMAC-SHA256 signed envelope over HTTP and WebSocket; place/cancel orders and stream ExecutionReport, Trade, and user.orders channels. Production wss://partner.pintu.co.id/ws/v1, sandbox wss://partner.sandbox.pintu.co.id/ws/v1.
+
+## Docs
+
+- [API Reference](https://docs.pintu.pro/): Pintu Pro partner API reference (auth-gated).
+- [Go sample client](https://github.com/pintu-crypto/pintu-api-sample-go): first-party Go reference implementation of the protocol.
+- [GitHub organization](https://github.com/pintu-crypto): Pintu Crypto Fintech.
+
+## Artifacts
+
+- [Authentication](authentication/pintu-authentication.yml): HMAC-SHA256 signed request envelope.
+- [Conventions](conventions/pintu-conventions.yml): envelope, ClOrdID idempotency, streaming replay, versioning, rate limiting.
+- [Error codes](errors/pintu-error-codes.yml): numeric code/message error envelope.
+- [Sandbox](sandbox/pintu-sandbox.yml): dedicated sandbox host + credentials.
+- [Event surface (Webhooks)](asyncapi/pintu-partner-asyncapi.yml): WebSocket streaming channels.
+- [Lifecycle](lifecycle/pintu-lifecycle.yml): v1 URI-path versioning, environments.
+
+## Company
+
+- [Website](https://pintu.co.id): Pintu consumer app (spot, futures, Earn, Web3 wallet).
+- [News / Blog](https://pintu.co.id/en/news)
+- [Bug bounty](https://pintu.co.id/security/bug-bounty): vulnerability disclosure program.
+- [Terms of Service](https://pintu.co.id/en/pages/pintu-pro-terms-and-conditions)
+- [Privacy Policy](https://pintu.co.id/en/pages/privacy-policy)

@@ -1,0 +1,20 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pintu.pro/
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: /ws/v1 on the partner WebSocket endpoints
+environments:
+  production: wss://partner.pintu.co.id/ws/v1
+  sandbox: wss://partner.sandbox.pintu.co.id/ws/v1
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public deprecation/sunset policy located (docs portal is auth-gated).
+sla:
+  url: null
+status_page: null
+notes: >-
+  No public status page or SLA page was found for the Pintu Pro partner API.
+  A separate sandbox environment is published for integration testing.

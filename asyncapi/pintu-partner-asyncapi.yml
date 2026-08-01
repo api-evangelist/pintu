@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.pintu.pro/
+spec_type: Webhooks
+transport: websocket
+note: >-
+  Pintu Pro exposes an event surface as WebSocket streaming channels (not an
+  HTTP webhook callback and not a published AsyncAPI document). Partners
+  subscribe over wss://partner.pintu.co.id/ws/v1 to receive order and trade
+  events. Channels are public or private; private channels require the channel
+  subscription routine after HMAC authentication. Captured as a Webhooks-class
+  event surface; no verbatim AsyncAPI is published to harvest.
+endpoints:
+  production: wss://partner.pintu.co.id/ws/v1
+  sandbox: wss://partner.sandbox.pintu.co.id/ws/v1
+channels:
+- name: ExecutionReport
+  access: private
+  description: Order execution status updates; supports StartDate historical replay.
+- name: Trade
+  access: private
+  description: Trade fills for the account; supports historical replay.
+- name: user.orders
+  access: private
+  description: Order lifecycle updates for the authenticated user.
