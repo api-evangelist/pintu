@@ -61,6 +61,12 @@ apis:
   tags:
   - Trading
   - WebSocket
+  - Order
+  - Market Data
+  - Cryptocurrency
+  tags_raw:
+  - Trading
+  - WebSocket
   - Orders
   - Market Data
   - Cryptocurrency
