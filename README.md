@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pintu is a company surfaced as a portfolio company of lightspeed-venture-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Pintu (PT Pintu Kemana Saja) is an Indonesian cryptocurrency exchange and investment app founded in April 2020 and headquartered in Jakarta. Licensed as a Physical Crypto Asset Trader (PFAK) under Bappebti and now supervised by the OJK, Pintu serves more than four million retail users with spot trading, crypto futures, staking/Earn, and a self-custody Web3 wallet connecting to DeFi and NFT dApps. Beyond the consumer app, Pintu operates Pintu Pro, an institutional and partner trading platform whose HMAC-signed WebSocket + HTTP API (docs.pintu.pro) lets market makers and partners place and cancel orders and stream execution reports and trades against production and sandbox environments. Pintu has raised over 150M USD across a Lightspeed-led 35M Series A+ (2021) and a 113M Series B (2022) with Intudo, Pantera Capital, and Northstar.
 
-Backed by: lightspeed-venture-partners
+**Areas:** Company · Cryptocurrency · Cryptocurrency Exchange · Trading · Fintech · Digital Assets · Web3 · Indonesia · WebSocket · Institutional Trading
+
+## Pintu on APIs.io
+
+Everything profiled for Pintu is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pintu/](https://apis.io/providers/pintu/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Pintu Pro Partner API](https://apis.io/apis/pintu/pintu-pro-partner-api/) — Pintu Pro's institutional/partner trading API. A unified message format is used over both an HTTP endpoint and a WebSocket transport, authenticated with an…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Pintu Partner Asyncapi](https://apis.io/asyncapis/pintu/pintu-partner-asyncapi/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Pintu Authentication](https://apis.io/security/pintu/pintu-authentication/)
+- [Pintu Domain Security](https://apis.io/security/pintu/pintu-domain-security/)
+- [Pintu Trust Center](https://apis.io/security/pintu/pintu-trust-center/)
+- [Pintu Vulnerability Disclosure](https://apis.io/security/pintu/pintu-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://pintu.co.id)
+- [Documentation](https://docs.pintu.pro/)
+- [Support](https://pintu.co.id/en/contact)
+- [Blog](https://pintu.co.id/news)
+- [Security](https://pintu.co.id/security/bug-bounty)
+- [Compliance](https://pintu.co.id/en/faq/safe-to-use-pintu)
+- [Terms of service](https://pintu.co.id/en/pages/pintu-pro-terms-and-conditions)
+- [Privacy policy](https://pintu.co.id/en/pages/privacy-policy)
+- [GitHub](https://github.com/pintu-crypto)
+
+## API Evangelist rating
+
+**Kin Score 39.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 21.1 |
+| Developer ergonomics | 39.3 |
+| Access clarity | 36.8 |
+
+**Agent readiness 25.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | documented (partial credit) |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 33.3** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pintu/](https://apis.io/providers/pintu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pintu: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pintu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
